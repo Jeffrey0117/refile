@@ -1,0 +1,11 @@
+name = "dukbox"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+[[kv_namespaces]]
+binding = "FILE_STORE"
+id = "dukbox-files-dev"
+preview_id = "dukbox-files-preview"
+
+# Secrets (set via: wrangler secret put API_KEY)
+# For local dev, create .dev.vars with: API_KEY=dev-test-key
