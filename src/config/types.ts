@@ -17,7 +17,14 @@ export interface S3Config {
   readonly publicUrlBase?: string
 }
 
-export type BackendConfig = HttpUploadConfig | S3Config
+export interface DukConfig {
+  readonly type: 'duk'
+  readonly variant: 'duky' | 'dukic' | 'dukbox'
+  readonly endpoint: string
+  readonly apiKey: string
+}
+
+export type BackendConfig = HttpUploadConfig | S3Config | DukConfig
 
 export interface RefileConfig {
   readonly defaultBackend: string
